@@ -1,0 +1,46 @@
+<svg id="svg-exhibit-3-5" class="diagram-svg" viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="g7" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#be123c"/><stop offset="100%" stop-color="#fb7185"/></linearGradient>
+  </defs>
+  <rect x="575" y="14" width="175" height="104" rx="10" fill="url(#g1)"/>
+  <text x="662" y="40" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">1. الاهتمام بالتفاصيل</text>
+  <text x="662" y="62" fill="#dbeafe" font-size="9.5" text-anchor="middle">الدقة العالية والتركيز</text>
+  <text x="662" y="78" fill="#dbeafe" font-size="9.5" text-anchor="middle">الصارم على الجزئيات</text>
+  <text x="662" y="94" fill="#dbeafe" font-size="9.5" text-anchor="middle">الإجرائية</text>
+  <rect x="385" y="14" width="175" height="104" rx="10" fill="url(#g2)"/>
+  <text x="472" y="40" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">2. التوجه نحو النتائج</text>
+  <text x="472" y="62" fill="#eff6ff" font-size="9.5" text-anchor="middle">تحكيم المقاصد وبلوغ</text>
+  <text x="472" y="78" fill="#eff6ff" font-size="9.5" text-anchor="middle">الأهداف قبل النظر</text>
+  <text x="472" y="94" fill="#eff6ff" font-size="9.5" text-anchor="middle">في الوسائل</text>
+  <rect x="195" y="14" width="175" height="104" rx="10" fill="url(#g3)"/>
+  <text x="282" y="40" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">3. التوجه نحو الأفراد</text>
+  <text x="282" y="62" fill="#f0f9ff" font-size="9.5" text-anchor="middle">رعاية كرامة الموظفين</text>
+  <text x="282" y="78" fill="#f0f9ff" font-size="9.5" text-anchor="middle">وإعلاء شأن تطلعاتهم</text>
+  <text x="282" y="94" fill="#f0f9ff" font-size="9.5" text-anchor="middle">الإنسانية</text>
+  <rect x="5" y="14" width="175" height="104" rx="10" fill="url(#g4)"/>
+  <text x="92" y="40" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">4. التوجه نحو الفريق</text>
+  <text x="92" y="62" fill="#ccfbf1" font-size="9.5" text-anchor="middle">بناء أداء العمل على</text>
+  <text x="92" y="78" fill="#ccfbf1" font-size="9.5" text-anchor="middle">التعاضد الجماعي</text>
+  <text x="92" y="94" fill="#ccfbf1" font-size="9.5" text-anchor="middle">والجهد المشترك</text>
+  <rect x="385" y="136" width="175" height="104" rx="10" fill="url(#g5)"/>
+  <text x="472" y="162" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">5. الحزم التنافسي</text>
+  <text x="472" y="184" fill="#fef3c7" font-size="9.5" text-anchor="middle">المغامرة الشرسة</text>
+  <text x="472" y="200" fill="#fef3c7" font-size="9.5" text-anchor="middle">لمزاحمة المنافسين</text>
+  <text x="472" y="216" fill="#fef3c7" font-size="9.5" text-anchor="middle">واقتناص الأسواق</text>
+  <rect x="195" y="136" width="175" height="104" rx="10" fill="url(#g6)"/>
+  <text x="282" y="162" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">6. الاستقرار</text>
+  <text x="282" y="184" fill="#ede9fe" font-size="9.5" text-anchor="middle">تفضيل الثبات المؤسسي</text>
+  <text x="282" y="200" fill="#ede9fe" font-size="9.5" text-anchor="middle">والالتزام بالمسارات</text>
+  <text x="282" y="216" fill="#ede9fe" font-size="9.5" text-anchor="middle">الآمنة</text>
+  <rect x="5" y="136" width="175" height="104" rx="10" fill="url(#g7)"/>
+  <text x="92" y="162" fill="#ffffff" font-weight="800" font-size="11.5" text-anchor="middle">7. الابتكار والمخاطرة</text>
+  <text x="92" y="184" fill="#ffe4e6" font-size="9.5" text-anchor="middle">تحفيز المبادرات</text>
+  <text x="92" y="200" fill="#ffe4e6" font-size="9.5" text-anchor="middle">غير المسبوقة واحتضان</text>
+  <text x="92" y="216" fill="#ffe4e6" font-size="9.5" text-anchor="middle">الأفكار الجريئة</text>
+</svg>

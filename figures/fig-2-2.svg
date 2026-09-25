@@ -1,0 +1,22 @@
+<svg id="svg-exhibit-2-2" class="diagram-svg" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+  </defs>
+  <rect x="390" y="14" width="350" height="170" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="565" y="44" fill="#1e3a8a" font-weight="800" font-size="14" text-anchor="middle">العقلانية التامة (Rationality)</text>
+  <text x="565" y="72" fill="#334155" font-size="10.5" text-anchor="middle">الافتراض: موضوعية ومنطق مطلق، إحاطة بجميع البدائل،</text>
+  <text x="565" y="90" fill="#334155" font-size="10.5" text-anchor="middle">وعلم تام بكافة النتائج</text>
+  <rect x="430" y="104" width="270" height="24" rx="12" fill="url(#g1)"/>
+  <text x="565" y="120" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle">المقصد: التعظيم الأقصى للمردود (Maximizing)</text>
+  <text x="565" y="152" fill="#64748b" font-size="10.5" text-anchor="middle">الواقع: نموذج مثالي نظري نادراً ما يتحقق</text>
+  <rect x="20" y="14" width="350" height="170" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+  <text x="195" y="44" fill="#0f766e" font-weight="800" font-size="14" text-anchor="middle">العقلانية المقيدة (Bounded Rationality)</text>
+  <text x="195" y="72" fill="#334155" font-size="10.5" text-anchor="middle">الافتراض: قدرة العقل البشري محدودة بضيق الوقت،</text>
+  <text x="195" y="90" fill="#334155" font-size="10.5" text-anchor="middle">وصعوبة الإحاطة بكافة المعلومات</text>
+  <rect x="60" y="104" width="270" height="24" rx="12" fill="url(#g2)"/>
+  <text x="195" y="120" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle">المقصد: اختيار حل مرضٍ وكافٍ (Satisficing)</text>
+  <text x="195" y="152" fill="#64748b" font-size="10.5" text-anchor="middle">الواقع: السلوك الفعلي للمديرين في بيئة الأعمال</text>
+  <rect x="230" y="200" width="300" height="36" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="223" fill="#1e3a8a" font-weight="700" font-size="11.5" text-anchor="middle">المديرون الفعليون يعملون ضمن العقلانية المقيدة</text>
+</svg>

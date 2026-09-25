@@ -1,0 +1,36 @@
+<svg id="svg-exhibit-4-1" class="diagram-svg" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect x="520" y="14" width="220" height="170" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="630" y="42" fill="#1e3a8a" font-weight="800" font-size="13" text-anchor="middle">الموقف الإثنوسنتري</text>
+  <text x="630" y="60" fill="#2563eb" font-size="10.5" text-anchor="middle">(Ethnocentric)</text>
+  <text x="630" y="86" fill="#334155" font-size="10" text-anchor="middle">التركيز على البلد الأم، وإرجاع</text>
+  <text x="630" y="102" fill="#334155" font-size="10" text-anchor="middle">الصواب الحصري لأساليب الوطن</text>
+  <text x="630" y="118" fill="#334155" font-size="10" text-anchor="middle">الأم، وفرض القرارات مركزياً</text>
+  <text x="630" y="134" fill="#334155" font-size="10" text-anchor="middle">على الفروع الدولية</text>
+  <rect x="560" y="148" width="140" height="24" rx="12" fill="url(#g1)"/>
+  <text x="630" y="164" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">مركزية صارمة</text>
+  <rect x="270" y="14" width="220" height="170" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+  <text x="380" y="42" fill="#0f766e" font-weight="800" font-size="13" text-anchor="middle">الموقف البوليسنتري</text>
+  <text x="380" y="60" fill="#0d9488" font-size="10.5" text-anchor="middle">(Polycentric)</text>
+  <text x="380" y="86" fill="#334155" font-size="10" text-anchor="middle">التركيز على البلد المضيف،</text>
+  <text x="380" y="102" fill="#334155" font-size="10" text-anchor="middle">والاعتقاد بأن أهل كل بلد</text>
+  <text x="380" y="118" fill="#334155" font-size="10" text-anchor="middle">أدرى ببيئتهم، وتفويض إدارة</text>
+  <text x="380" y="134" fill="#334155" font-size="10" text-anchor="middle">العمليات للكوادر المحلية</text>
+  <rect x="310" y="148" width="140" height="24" rx="12" fill="url(#g2)"/>
+  <text x="380" y="164" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">لامركزية محلية</text>
+  <rect x="20" y="14" width="220" height="170" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="42" fill="#b45309" font-weight="800" font-size="13" text-anchor="middle">المنظور الجيوسنتري</text>
+  <text x="130" y="60" fill="#f59e0b" font-size="10.5" text-anchor="middle">(Geocentric)</text>
+  <text x="130" y="86" fill="#334155" font-size="10" text-anchor="middle">منظور كوني شامل يبحث عن</text>
+  <text x="130" y="102" fill="#334155" font-size="10" text-anchor="middle">أفضل الكفاءات والحلول حول</text>
+  <text x="130" y="118" fill="#334155" font-size="10" text-anchor="middle">العالم بغض النظر عن القيود</text>
+  <text x="130" y="134" fill="#334155" font-size="10" text-anchor="middle">والحدود الجغرافية</text>
+  <rect x="60" y="148" width="140" height="24" rx="12" fill="url(#g3)"/>
+  <text x="130" y="164" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">نظرة عالمية شاملة</text>
+  <rect x="230" y="204" width="300" height="36" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="227" fill="#1e3a8a" font-weight="700" font-size="11.5" text-anchor="middle">من مركزية الوطن الأم إلى العالمية الشاملة</text>
+</svg>

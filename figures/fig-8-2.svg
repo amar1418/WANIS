@@ -1,0 +1,48 @@
+<svg id="svg-exhibit-8-2" class="diagram-svg" viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect x="520" y="14" width="220" height="220" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="630" y="42" fill="#1e3a8a" font-weight="800" font-size="12.5" text-anchor="middle">أدوار العلاقات الشخصية</text>
+  <text x="630" y="62" fill="#64748b" font-size="9.5" text-anchor="middle">(Interpersonal)</text>
+  <rect x="540" y="76" width="180" height="40" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="630" y="94" fill="#1e3a8a" font-weight="700" font-size="11" text-anchor="middle">الرمزية (Figurehead)</text>
+  <text x="630" y="108" fill="#475569" font-size="9" text-anchor="middle">التمثيل الرسمي للمنظمة</text>
+  <rect x="540" y="124" width="180" height="40" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="630" y="142" fill="#1e3a8a" font-weight="700" font-size="11" text-anchor="middle">القائد (Leader)</text>
+  <text x="630" y="156" fill="#475569" font-size="9" text-anchor="middle">توجيه وتدريب وتحفيز</text>
+  <rect x="540" y="172" width="180" height="40" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="630" y="190" fill="#1e3a8a" font-weight="700" font-size="11" text-anchor="middle">الموصول (Liaison)</text>
+  <text x="630" y="204" fill="#475569" font-size="9" text-anchor="middle">بناء شبكات الاتصال الخارجية</text>
+  <rect x="270" y="14" width="220" height="220" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+  <text x="380" y="42" fill="#0f766e" font-weight="800" font-size="12.5" text-anchor="middle">الأدوار المعلوماتية</text>
+  <text x="380" y="62" fill="#64748b" font-size="9.5" text-anchor="middle">(Informational)</text>
+  <rect x="290" y="76" width="180" height="40" rx="8" fill="#ffffff" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="380" y="94" fill="#0f766e" font-weight="700" font-size="11" text-anchor="middle">المراقب (Monitor)</text>
+  <text x="380" y="108" fill="#475569" font-size="9" text-anchor="middle">جمع المعلومات الداخلية والخارجية</text>
+  <rect x="290" y="124" width="180" height="40" rx="8" fill="#ffffff" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="380" y="142" fill="#0f766e" font-weight="700" font-size="11" text-anchor="middle">الناشر (Disseminator)</text>
+  <text x="380" y="156" fill="#475569" font-size="9" text-anchor="middle">توزيع المعلومات على المرؤوسين</text>
+  <rect x="290" y="172" width="180" height="40" rx="8" fill="#ffffff" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="380" y="190" fill="#0f766e" font-weight="700" font-size="11" text-anchor="middle">المتحدث (Spokesperson)</text>
+  <text x="380" y="204" fill="#475569" font-size="9" text-anchor="middle">الإعلان الرسمي للخارج</text>
+  <rect x="20" y="14" width="220" height="220" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="42" fill="#b45309" font-weight="800" font-size="12.5" text-anchor="middle">الأدوار القرارية</text>
+  <text x="130" y="62" fill="#64748b" font-size="9.5" text-anchor="middle">(Decisional)</text>
+  <rect x="40" y="76" width="180" height="40" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="130" y="94" fill="#b45309" font-weight="700" font-size="11" text-anchor="middle">الرائد (Entrepreneur)</text>
+  <text x="130" y="108" fill="#475569" font-size="9" text-anchor="middle">إطلاق المبادرات والتحسينات</text>
+  <rect x="40" y="124" width="180" height="40" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="130" y="142" fill="#b45309" font-weight="700" font-size="11" text-anchor="middle">معالج الاضطرابات</text>
+  <text x="130" y="156" fill="#475569" font-size="9" text-anchor="middle">(Disturbance Handler)</text>
+  <rect x="40" y="172" width="180" height="40" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="130" y="190" fill="#b45309" font-weight="700" font-size="11" text-anchor="middle">موزع الموارد</text>
+  <text x="130" y="204" fill="#475569" font-size="9" text-anchor="middle">(Resource Allocator)</text>
+  <rect x="40" y="220" width="180" height="0" rx="0" fill="none"/>
+  <rect x="290" y="220" width="180" height="0" rx="0" fill="none"/>
+  <rect x="540" y="220" width="180" height="0" rx="0" fill="none"/>
+  <rect x="230" y="252" width="300" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="269" fill="#1e3a8a" font-weight="700" font-size="11" text-anchor="middle">(Mintzberg's Ten Managerial Roles)</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg id="svg-exhibit-3-1" class="diagram-svg" viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+  </defs>
+  <rect x="390" y="14" width="350" height="170" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="565" y="42" fill="#1e3a8a" font-weight="800" font-size="13.5" text-anchor="middle">المنظور الإطلاقي (Omnipotent View)</text>
+  <text x="565" y="70" fill="#334155" font-size="10.5" text-anchor="middle">الافتراض: المسؤولية الحتمية والمطلقة للمدير</text>
+  <text x="565" y="88" fill="#334155" font-size="10.5" text-anchor="middle">عن كافة مخرجات المنظمة ونتائجها</text>
+  <text x="565" y="116" fill="#334155" font-size="10.5" text-anchor="middle">الأثر: مكافأة القيادة عند الازدهار،</text>
+  <text x="565" y="134" fill="#334155" font-size="10.5" text-anchor="middle">وتغييرها الفوري عند التعثر</text>
+  <rect x="430" y="148" width="270" height="24" rx="12" fill="url(#g1)"/>
+  <text x="565" y="164" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle">التركيز: السيطرة التامة للقيادة</text>
+  <rect x="20" y="14" width="350" height="170" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="2"/>
+  <text x="195" y="42" fill="#0f766e" font-weight="800" font-size="13.5" text-anchor="middle">المنظور الرمزي (Symbolic View)</text>
+  <text x="195" y="70" fill="#334155" font-size="10.5" text-anchor="middle">الافتراض: تقييد قدرة المدير بقوى كبرى</text>
+  <text x="195" y="88" fill="#334155" font-size="10.5" text-anchor="middle">خارجية تتجاوز إرادته وقدرته على التحكم</text>
+  <text x="195" y="116" fill="#334155" font-size="10.5" text-anchor="middle">الأثر: المدير رمز يمنح الدلالة والاتجاه،</text>
+  <text x="195" y="134" fill="#334155" font-size="10.5" text-anchor="middle">وقوى السوق تصنع النتائج الفعلية</text>
+  <rect x="60" y="148" width="270" height="24" rx="12" fill="url(#g2)"/>
+  <text x="195" y="164" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle">التركيز: خضوع المنظمة لمحيطها الخارجي</text>
+  <rect x="180" y="204" width="400" height="48" rx="10" fill="#1e3a8a"/>
+  <text x="380" y="224" fill="#ffffff" font-weight="700" font-size="12" text-anchor="middle">الواقع الإداري: حرية تصرف مقيدة</text>
+  <text x="380" y="242" fill="#dbeafe" font-size="10.5" text-anchor="middle">بين الإرادة الذاتية وضغوط البيئة الخارجية وثقافة المؤسسة</text>
+</svg>

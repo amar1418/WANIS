@@ -1,0 +1,20 @@
+<svg id="svg-exhibit-1-1" class="diagram-svg" viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#64748b"/><stop offset="100%" stop-color="#94a3b8"/></linearGradient>
+  </defs>
+  <polygon points="255,16 505,16 550,90 210,90" fill="url(#g1)" stroke="#fff" stroke-width="2"/>
+  <text x="380" y="42" fill="#ffffff" font-weight="800" font-size="14" text-anchor="middle">الإدارة العليا (Top Managers)</text>
+  <text x="380" y="66" fill="#dbeafe" font-size="11" text-anchor="middle">رسم الاستراتيجيات الكلية واتخاذ القرارات المصيرية للمنظمة</text>
+  <polygon points="208,96 552,96 612,172 148,172" fill="url(#g2)" stroke="#fff" stroke-width="2"/>
+  <text x="380" y="124" fill="#ffffff" font-weight="800" font-size="14" text-anchor="middle">الإدارة الوسطى (Middle Managers)</text>
+  <text x="380" y="148" fill="#eff6ff" font-size="11" text-anchor="middle">ترجمة الاستراتيجية إلى خطط قطاعية وتوجيه مديري الخط الأول</text>
+  <polygon points="146,178 614,178 678,254 82,254" fill="url(#g3)" stroke="#fff" stroke-width="2"/>
+  <text x="380" y="206" fill="#ffffff" font-weight="800" font-size="14" text-anchor="middle">إدارة الخط الأول / الإشرافية (First-line Managers)</text>
+  <text x="380" y="230" fill="#f0f9ff" font-size="11" text-anchor="middle">الإشراف الميداني المباشر على أداء الموظفين التنفيذيين</text>
+  <polygon points="80,260 680,260 746,336 14,336" fill="url(#g4)" stroke="#fff" stroke-width="2"/>
+  <text x="380" y="288" fill="#ffffff" font-weight="800" font-size="14" text-anchor="middle">الموظفون التنفيذيون (Non-managerial Employees)</text>
+  <text x="380" y="312" fill="#f1f5f9" font-size="11" text-anchor="middle">إنجاز الأعمال التشغيلية والخدمية المباشرة دون مسؤوليات إشرافية</text>
+</svg>

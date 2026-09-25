@@ -1,0 +1,52 @@
+<svg id="svg-exhibit-9-1" class="diagram-svg" viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker>
+  </defs>
+  <rect x="520" y="14" width="220" height="96" rx="10" fill="url(#g1)"/>
+  <text x="630" y="40" fill="#ffffff" font-weight="800" font-size="12" text-anchor="middle">1. تحديد الرسالة والأهداف</text>
+  <text x="630" y="62" fill="#dbeafe" font-size="9.5" text-anchor="middle">صياغة الرؤية والغاية</text>
+  <text x="630" y="78" fill="#dbeafe" font-size="9.5" text-anchor="middle">والأهداف الاستراتيجية</text>
+  <text x="630" y="94" fill="#dbeafe" font-size="9.5" text-anchor="middle">الطويلة المدى</text>
+  <rect x="270" y="14" width="220" height="96" rx="10" fill="url(#g2)"/>
+  <text x="380" y="40" fill="#ffffff" font-weight="800" font-size="12" text-anchor="middle">2. التحليل الخارجي</text>
+  <text x="380" y="62" fill="#eff6ff" font-size="9.5" text-anchor="middle">رصد الفرص المتاحة</text>
+  <text x="380" y="78" fill="#eff6ff" font-size="9.5" text-anchor="middle">والتهديدات المحيطة</text>
+  <text x="380" y="94" fill="#eff6ff" font-size="9.5" text-anchor="middle">(Opportunities &amp; Threats)</text>
+  <rect x="20" y="14" width="220" height="96" rx="10" fill="url(#g3)"/>
+  <text x="130" y="40" fill="#ffffff" font-weight="800" font-size="12" text-anchor="middle">3. التحليل الداخلي</text>
+  <text x="130" y="62" fill="#f0f9ff" font-size="9.5" text-anchor="middle">تقييم نقاط القوة</text>
+  <text x="130" y="78" fill="#f0f9ff" font-size="9.5" text-anchor="middle">وأوجه الضعف</text>
+  <text x="130" y="94" fill="#f0f9ff" font-size="9.5" text-anchor="middle">(Strengths &amp; Weaknesses)</text>
+  <rect x="520" y="128" width="220" height="96" rx="10" fill="url(#g4)"/>
+  <text x="630" y="154" fill="#ffffff" font-weight="800" font-size="12" text-anchor="middle">4. صياغة الاستراتيجيات</text>
+  <text x="630" y="176" fill="#ccfbf1" font-size="9.5" text-anchor="middle">اختيار البديل الاستراتيجي</text>
+  <text x="630" y="192" fill="#ccfbf1" font-size="9.5" text-anchor="middle">الأنسب على مستوى</text>
+  <text x="630" y="208" fill="#ccfbf1" font-size="9.5" text-anchor="middle">المنظمة والوحدات</text>
+  <rect x="270" y="128" width="220" height="96" rx="10" fill="url(#g5)"/>
+  <text x="380" y="154" fill="#ffffff" font-weight="800" font-size="12" text-anchor="middle">5. تنفيذ الاستراتيجيات</text>
+  <text x="380" y="176" fill="#fef3c7" font-size="9.5" text-anchor="middle">تحويل الخطط إلى إجراءات</text>
+  <text x="380" y="192" fill="#fef3c7" font-size="9.5" text-anchor="middle">وتخصيص الموارد</text>
+  <text x="380" y="208" fill="#fef3c7" font-size="9.5" text-anchor="middle">وتفعيل القيادة</text>
+  <rect x="20" y="128" width="220" height="96" rx="10" fill="url(#g6)"/>
+  <text x="130" y="154" fill="#ffffff" font-weight="800" font-size="12" text-anchor="middle">6. تقييم النتائج</text>
+  <text x="130" y="176" fill="#ede9fe" font-size="9.5" text-anchor="middle">قياس الأداء ومقارنته</text>
+  <text x="130" y="192" fill="#ede9fe" font-size="9.5" text-anchor="middle">بالأهداف وتصحيح</text>
+  <text x="130" y="208" fill="#ede9fe" font-size="9.5" text-anchor="middle">المسار</text>
+  <path d="M 270 62 L 250 62" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 520 62 L 500 62" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 130 110 L 130 128" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 380 110 L 380 128" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 630 110 L 630 128" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 270 176 L 250 176" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 520 176 L 500 176" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M 130 224 L 130 244" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="130" y="262" fill="#64748b" font-size="9.5" text-anchor="middle">تغذية راجعة</text>
+  <rect x="230" y="276" width="300" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="293" fill="#1e3a8a" font-weight="700" font-size="11" text-anchor="middle">(The Strategic Management Process)</text>
+</svg>

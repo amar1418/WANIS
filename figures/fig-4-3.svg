@@ -1,0 +1,24 @@
+<svg id="svg-exhibit-4-3" class="diagram-svg" viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d9488"/></linearGradient>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect x="20" y="14" width="720" height="52" rx="10" fill="url(#g1)"/>
+  <text x="380" y="36" fill="#ffffff" font-weight="800" font-size="13" text-anchor="middle">1. مسافة القوة (Power Distance)</text>
+  <text x="380" y="56" fill="#dbeafe" font-size="10.5" text-anchor="middle">مدى قبول التسليم بالتفاوت الطبقي والسلطوي في المؤسسة والمجتمع</text>
+  <rect x="20" y="76" width="720" height="52" rx="10" fill="url(#g2)"/>
+  <text x="380" y="98" fill="#ffffff" font-weight="800" font-size="13" text-anchor="middle">2. الفردية والجماعية (Individualism vs. Collectivism)</text>
+  <text x="380" y="118" fill="#eff6ff" font-size="10.5" text-anchor="middle">تغليب المصالح الشخصية مقابل الالتزام بالروح الجماعية والولاء المتبادل</text>
+  <rect x="20" y="138" width="720" height="52" rx="10" fill="url(#g3)"/>
+  <text x="380" y="160" fill="#ffffff" font-weight="800" font-size="13" text-anchor="middle">3. الإنجاز والرعاية (Achievement vs. Nurturing)</text>
+  <text x="380" y="180" fill="#f0f9ff" font-size="10.5" text-anchor="middle">التسابق المادي والحزم التنافسي مقابل جودة الحياة والتراحم الإنساني</text>
+  <rect x="20" y="200" width="720" height="52" rx="10" fill="url(#g4)"/>
+  <text x="380" y="222" fill="#ffffff" font-weight="800" font-size="13" text-anchor="middle">4. تجنب عدم اليقين (Uncertainty Avoidance)</text>
+  <text x="380" y="242" fill="#ccfbf1" font-size="10.5" text-anchor="middle">الخشية من المجهول والركون للقوانين الصارمة مقابل تقبل التغيير والغموض</text>
+  <rect x="20" y="262" width="720" height="52" rx="10" fill="url(#g5)"/>
+  <text x="380" y="284" fill="#ffffff" font-weight="800" font-size="13" text-anchor="middle">5. التوجه الزمني (Time Orientation)</text>
+  <text x="380" y="304" fill="#fef3c7" font-size="10.5" text-anchor="middle">التخطيط المستقبلي والادخار الصبور مقابل الاقتصار على المكاسب السريعة</text>
+</svg>

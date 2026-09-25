@@ -1,0 +1,28 @@
+<svg id="svg-exhibit-7-4" class="diagram-svg" viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#be123c"/><stop offset="100%" stop-color="#fb7185"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+  </defs>
+  <rect x="390" y="14" width="350" height="210" rx="12" fill="#fff1f2" stroke="#fb7185" stroke-width="2"/>
+  <text x="565" y="42" fill="#be123c" font-weight="800" font-size="13" text-anchor="middle">دوافع مقاومة التغيير</text>
+  <text x="565" y="72" fill="#334155" font-size="10" text-anchor="middle">• الخوف من المجهول: انعدام اليقين</text>
+  <text x="565" y="90" fill="#334155" font-size="10" text-anchor="middle">والشك في النتائج</text>
+  <text x="565" y="118" fill="#334155" font-size="10" text-anchor="middle">• الراحة في العادة: صعوبة هجر</text>
+  <text x="565" y="136" fill="#334155" font-size="10" text-anchor="middle">الإجراءات المعتادة</text>
+  <text x="565" y="164" fill="#334155" font-size="10" text-anchor="middle">• خشية الخسارة: الخوف من فقدان</text>
+  <text x="565" y="182" fill="#334155" font-size="10" text-anchor="middle">المال أو المكانة</text>
+  <text x="565" y="210" fill="#334155" font-size="10" text-anchor="middle">• الشك في الجدوى: الاعتقاد بأن</text>
+  <text x="565" y="228" fill="#334155" font-size="10" text-anchor="middle">التحول يضر المنشأة</text>
+  <rect x="20" y="14" width="350" height="210" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="42" fill="#1e3a8a" font-weight="800" font-size="13" text-anchor="middle">التقنيات الإدارية الست لتقليص المقاومة</text>
+  <text x="195" y="72" fill="#334155" font-size="10" text-anchor="middle">1. التعليم والتواصل: للشرح والإقناع</text>
+  <text x="195" y="90" fill="#334155" font-size="10" text-anchor="middle">وتبديد الغموض</text>
+  <text x="195" y="118" fill="#334155" font-size="10" text-anchor="middle">2. المشاركة: إشراك المتأثرين في هندسة</text>
+  <text x="195" y="136" fill="#334155" font-size="10" text-anchor="middle">القرار</text>
+  <text x="195" y="164" fill="#334155" font-size="10" text-anchor="middle">3. التيسير والدعم: بالتدريب والمعونة</text>
+  <text x="195" y="182" fill="#334155" font-size="10" text-anchor="middle">الإرشادية والنفسية</text>
+  <text x="195" y="210" fill="#334155" font-size="10" text-anchor="middle">4. التفاوض: للمقايضة العادلة مع</text>
+  <text x="195" y="228" fill="#334155" font-size="10" text-anchor="middle">المعارضين الأقوياء</text>
+  <rect x="20" y="240" width="720" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="257" fill="#1e3a8a" font-weight="700" font-size="10.5" text-anchor="middle">5. المناورة: للاستقطاب السريع وتخفيف التوتر — 6. الإكراه: للحسم القاطع عند الأزمات الخانقة فقط</text>
+</svg>
