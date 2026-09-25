@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>وَنِيس — رفيق القراءة والتعلّم الأكاديمي</title>
+  <meta name="description" content="مساحتك الهادئة وملاذك المصمم ليؤنس رحلتك بين أمهات الكتب والمراجع؛ يجمع بين عراقة الصفحة المنسابة، وفصاحة البيان الصافي، ومعلمٍ حكيم يُدارسك ويختبر استيعابك متى طلبت، دون ضجيج أو تشتيت.">
+  <meta name="theme-color" content="#155e8c">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icon.svg">
+  
+  <!-- الخط العربي المعتمد -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body data-theme="light">
+
+  <div id="reading-progress"></div>
+
+  <!-- زر الخروج من وضع ملء الشاشة -->
+  <button class="immersive-exit-btn" id="immersive-exit-btn" onclick="exitImmersive()">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <span>إظهار الأشرطة</span>
+  </button>
+
+  <!-- رأس المنصة الموحد بالأيقونات المتناسقة كلياً -->
+  <header class="app-header">
+    <div class="brand-nav-group">
+      <!-- تبويب المكتبة -->
+      <button class="btn-nav-tab active" id="tab-nav-home" onclick="showView('home')" title="المكتبة الشاملة">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span class="nav-tab-label">المكتبة</span>
+      </button>
+
+      <!-- تبويب القارئ -->
+      <button class="btn-nav-tab" id="tab-nav-reader" onclick="showView('reader')" title="قارئ الكتب">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        <span class="nav-tab-label">القارئ</span>
+      </button>
+
+      <!-- تبويب المختبر -->
+      <button class="btn-nav-tab" id="tab-nav-lab" onclick="showView('lab')" title="مختبر استيراد الكتب">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        <span class="nav-tab-label">المختبر</span>
+      </button>
+
+      <!-- شارة اختيار الكتاب تظهر في القارئ فقط -->
+      <button class="library-selector-badge" id="reader-book-badge" onclick="toggleSheet('library-sheet')" title="تغيير الكتاب" style="display: none;">
+        <span id="active-book-title">مبادئ الإدارة</span>
+        <span style="opacity:0.6; font-size:0.7rem;">▼</span>
+      </button>
+
+      <span class="chapter-badge-pill" id="active-chapter-pill" onclick="toggleSheet('chapters-sheet')" title="تبديل الفصل" style="display: none;">
+        الفصل 1 ▾
+      </span>
+    </div>
+
+    <div class="header-actions">
+      <!-- زر المعلم الأكاديمي الذكي الموحد -->
+      <button class="btn-text ai-btn-highlight" onclick="openAISheet('chat')" title="المعلم الذكي">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg>
+        <span class="nav-tab-label">المعلم الذكي</span>
+      </button>
+
+      <!-- درج الفهرس -->
+      <button class="btn-icon" onclick="toggleSheet('toc-sheet')" title="فهرس موضوعات الفصل">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <!-- درج الإعدادات -->
+      <button class="btn-icon" onclick="toggleSheet('settings-sheet')" title="إعدادات الخط والمظهر">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      </button>
+
+      <!-- زر ملء الشاشة -->
+      <button class="btn-icon" onclick="toggleImmersive()" title="ملء الشاشة">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. واجهة المكتبة الرئيسية -->
+  <div id="home-view-container" class="app-view-container active-view">
+    <div class="home-view-wrapper">
+      <section class="hero-banner">
+        <div class="hero-badge-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg>
+          <span>وَنِيس • مكتبتك وملاذك المعرفي المتكيف</span>
+        </div>
+        <h1 class="hero-title">وَنِيس <span style="font-weight: 500; font-size: 0.6em; opacity: 0.85; display: inline-block;">| رفيق القراءة والتعلّم الأكاديمي</span></h1>
+        <p class="hero-description">
+          مساحتك الهادئة وملاذك المصمم ليؤنس رحلتك بين أمهات الكتب والمراجع؛ يجمع بين عراقة الصفحة المنسابة، وفصاحة البيان الصافي، ومعلمٍ حكيم يُدارسك ويختبر استيعابك متى طلبت، دون ضجيج أو تشتيت.
+        </p>
+
+        <!-- استئناف القراءة فوراً -->
+        <div class="hero-resume-card">
+          <div style="display: flex; align-items: center; gap: 0.9rem;">
+            <div style="background: var(--accent-bg); color: var(--accent); padding: 0.6rem; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <div>
+              <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); display: block;">استئناف القراءة:</span>
+              <strong style="font-size: 1.05rem; color: var(--accent);" id="resume-book-name">مبادئ الإدارة (Robbins & Coulter)</strong>
+              <span style="font-size: 0.84rem; color: var(--text-muted); display: block;" id="resume-chapter-name">الجزء الأول كاملاً • 7 فصول متاحة</span>
+            </div>
+          </div>
+          <button class="btn-text ai-btn-highlight" onclick="showView('reader')" style="padding: 0.6rem 1.4rem;">
+            <span>فتح في القارئ</span>
+            <span>←</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- شبكة رفوف المكتبة -->
+      <section>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.7rem; flex-wrap: wrap; gap: 0.6rem;">
+          <div>
+            <h2 style="margin: 0; font-size: 1.25rem;">رف المقررات والمراجع الأكاديمية</h2>
+            <p style="margin: 0.2rem 0 0 0; font-size: 0.84rem; color: var(--text-muted);">اختر أي كتاب لتصفحه، أو أضف كتاباً جديداً عبر المختبر الذكي</p>
+          </div>
+          <button class="btn-text" onclick="showView('lab')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>إدراج كتاب للمكتبة</span>
+          </button>
+        </div>
+        <div class="library-shelf-grid" id="home-library-grid"></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- 2. واجهة القارئ التفاعلي -->
+  <div id="reader-view-container" class="app-view-container">
+    <main class="book-viewport">
+      <div class="book-wrapper">
+        <div class="desktop-nav-ribbon">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span class="page-counter-pill">صفحة <span id="r-page-curr">1</span> من <span id="r-page-total">5</span></span>
+            <span style="font-size: 0.84rem; color: var(--text-muted);" id="r-ribbon-sub">مخرجات التعلم المستهدفة</span>
+          </div>
+          <div class="desktop-only-controls" style="display: flex; align-items: center; gap: 0.35rem;">
+            <button class="btn-text" onclick="prevPage()" id="d-btn-prev" title="الصفحة أو الفصل السابق">
+              <span>→</span>
+              <span>السابق</span>
+            </button>
+            <button class="btn-text ai-btn-highlight" onclick="nextPage()" id="d-btn-next" title="الصفحة أو الفصل التالي" style="font-weight: 600;">
+              <span>التالي</span>
+              <span>←</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="reader-dynamic-container"></div>
+      </div>
+    </main>
+
+    <!-- ملاحة الحواسيب العائمة -->
+    <aside class="desktop-floating-nav">
+      <button class="desktop-nav-arrow next-arrow" onclick="nextPage()" id="float-btn-next" title="التالي (←)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="desktop-nav-arrow prev-arrow" onclick="prevPage()" id="float-btn-prev" title="السابق (→)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </aside>
+
+    <!-- شريط الملاحة السفلي للهواتف الذكية -->
+    <footer class="mobile-bottom-bar">
+      <button class="btn-icon" onclick="prevPage()" id="m-btn-prev" title="الصفحة أو الفصل السابق">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <button class="btn-icon ai-btn-highlight" onclick="openAISheet('chat')" title="المعلم الذكي">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg>
+      </button>
+      <div class="mobile-scrubber-box">
+        <input type="range" class="scrubber-slider" id="mobile-scrubber" min="1" max="5" value="1" oninput="onScrubberInput(this.value)">
+        <div class="scrubber-label">
+          <span>صفحة</span> <strong id="m-page-curr">1</strong> <span>من <span id="m-page-total">5</span></span>
+        </div>
+      </div>
+      <button class="btn-icon" onclick="nextPage()" id="m-btn-next" title="الصفحة أو الفصل التالي">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+    </footer>
+  </div>
+
+  <!-- 3. واجهة مختبر الاستيراد المجرّد -->
+  <div id="lab-view-container" class="app-view-container">
+    <div class="lab-view-wrapper">
+      <div style="text-align: center; margin-bottom: 0.5rem;">
+        <h2 style="font-size: 1.5rem; color: var(--accent); margin: 0 0 0.5rem 0; border: none;">مختبر استيراد الكتب التلقائي</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+          أدرج مستنداً نصياً (TXT أو Markdown)، وسيهيكل النظام محتواه إلى صفحات قابلة للقراءة في القارئ مباشرة.
+        </p>
+      </div>
+
+      <div class="lab-upload-card" id="drop-zone" onclick="triggerDeviceUpload()">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--accent-bg); color: var(--accent); display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+        </div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem 0; font-size: 1.15rem; color: var(--text-main);">اسحب وأفلت ملف الكتاب أو الفصل هنا</h3>
+          <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">يدعم حالياً المستندات النصية TXT و Markdown (MD)</p>
+        </div>
+        <input type="file" id="lab-file-input" accept=".txt,.md,text/plain,text/markdown" onchange="handleFileSelected(this)" style="display: none;">
+      </div>
+
+      <div class="lab-action-buttons-group">
+        <button class="lab-primary-action-btn" onclick="triggerDeviceUpload()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          <span>إدراج ملف من الهاتف / الكمبيوتر</span>
+        </button>
+
+        <button class="lab-primary-action-btn btn-drive" onclick="openGoogleDriveModal()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 19.5h7L12 14l3 5.5h7L12 2z"></path><path d="M7 19.5L12 10l5 9.5H7z"></path></svg>
+          <span>إدراج ملف من Google Drive</span>
+        </button>
+      </div>
+
+      <div class="lab-processing-state" id="lab-processing-state">
+        <span class="ai-loading-pulse" style="width: 28px; height: 28px; border-width: 3px;"></span>
+        <div>
+          <strong style="display: block; font-size: 1.05rem; color: var(--accent); margin-bottom: 0.3rem;" id="proc-stage-title">جارٍ قراءة المستند وهيكلته...</strong>
+          <span style="font-size: 0.88rem; color: var(--text-muted);" id="proc-stage-desc">يُقسَّم النص إلى صفحات متساوية ويُدرج في المكتبة.</span>
+        </div>
+      </div>
+
+      <div class="lab-success-result" id="lab-success-result">
+        <div style="display: flex; align-items: center; gap: 0.8rem;">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: #ecfdf5; color: #10b981; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div>
+            <strong style="color: #065f46; font-size: 1.05rem; display: block;" id="res-detected-title">تم تجهيز الكتاب بنجاح!</strong>
+            <span style="color: var(--text-muted); font-size: 0.85rem;" id="res-detected-meta">تمت الهيكلة وإضافته للمكتبة تلقائياً.</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.6rem; margin-top: 0.4rem;">
+          <button class="btn-text ai-btn-highlight" onclick="openNewlyProcessedBook()" style="flex: 1; height: 42px; justify-content: center;">
+            <span>فتح في القارئ فوراً</span>
+            <span>←</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة إدراج ملف من Google Drive -->
+  <div class="bottom-sheet" id="drive-modal">
+    <div class="sheet-drag-handle" onclick="closeAllSheets()"></div>
+    <div class="sheet-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: #1a73e8;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 19.5h7L12 14l3 5.5h7L12 2z"></path><path d="M7 19.5L12 10l5 9.5H7z"></path></svg>
+        <span>استيراد ملف من Google Drive</span>
+      </div>
+      <button class="btn-icon" onclick="closeAllSheets()" style="border: none; background:transparent;">✕</button>
+    </div>
+    <div class="sheet-content">
+      <div>
+        <label style="display: block; font-size: 0.84rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.4rem;">رابط مشاركة الملف في Google Drive:</label>
+        <input type="url" id="drive-file-url" class="ai-input-field" placeholder="https://drive.google.com/file/d/..." style="width: 100%;">
+      </div>
+      <button class="btn-text ai-btn-highlight" onclick="processDriveUrl()" style="height: 42px; justify-content: center;">
+        <span>استيراد الملف ومعالجته الآن</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- جناح المعلم الذكي الشامل -->
+  <div class="ai-sheet" id="ai-sheet">
+    <div class="sheet-drag-handle" onclick="closeAllSheets()"></div>
+    <div class="sheet-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="color: var(--accent);"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg>
+        <span style="font-weight: 800; color: var(--accent);">المعلم الأكاديمي الذكي</span>
+      </div>
+      <button class="btn-icon" onclick="closeAllSheets()" style="border:none; background:transparent;">✕</button>
+    </div>
+
+    <!-- تبويبات المعلم الأكاديمي -->
+    <div class="ai-sheet-nav">
+      <button class="ai-tab-btn active" id="ai-tab-btn-chat" onclick="switchAITab('chat')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>حوار المعلم الأكاديمي</span>
+      </button>
+      <button class="ai-tab-btn" id="ai-tab-btn-quiz" onclick="switchAITab('quiz')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <span>مركز الاختبارات التكيفية</span>
+      </button>
+      <button class="ai-tab-btn" id="ai-tab-btn-summary" onclick="switchAITab('summary')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+        <span>كبسولة المراجعة</span>
+      </button>
+    </div>
+
+    <!-- تبويب 1: الحوار السقراطي المباشر بالذكاء الاصطناعي -->
+    <div id="ai-view-chat" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
+      <div class="ai-chat-thread" id="ai-chat-thread">
+        <div class="ai-msg assistant" id="ai-welcome-msg">
+          مرحباً بك! أنا معلمك ومستشارك الأكاديمي المدمج لمرجع «مبادئ الإدارة» (Robbins & Coulter - الجزء الأول كاملاً). يسعدني مناقشتك في أي مفهوم، أو تحليل المعضلات القيادية وحالات اتخاذ القرار، والتنوع، وأخلاقيات الأعمال، وإدارة التغيير. بم تحب أن نبدأ حوارنا اليوم؟
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.4rem; overflow-x: auto; padding: 0.5rem 1rem; background: var(--bg-subtle); border-top: 1px solid var(--border-color); scrollbar-width: none;">
+        <button class="btn-text" onclick="sendQuickPrompt('ما الفرق بين التنوع السطحي والتنوع العميق في المنظمات؟')" style="height:28px; font-size:0.75rem;">التنوع السطحي vs العميق</button>
+        <button class="btn-text" onclick="sendQuickPrompt('اشرح مراحل كولبرج الثلاث للتطور الأخلاقي وأثرها على سلوك المديرين')" style="height:28px; font-size:0.75rem;">مراحل كولبرج للأخلاق</button>
+        <button class="btn-text" onclick="sendQuickPrompt('قارن بين استعارة المياه الهادئة واستعارة منحدرات النهر الجارف في إدارة التغيير')" style="height:28px; font-size:0.75rem;">استعارتا التغيير</button>
+        <button class="btn-text" onclick="sendQuickPrompt('ما هي تقنيات كورت ليفين والتقنيات الست للتعامل مع مقاومة التغيير؟')" style="height:28px; font-size:0.75rem;">مقاومة التغيير</button>
+      </div>
+      <div style="padding: 0.75rem 1.1rem; background: var(--bg-surface); border-top: 1px solid var(--border-color); display: flex; gap: 0.5rem;">
+        <input type="text" id="ai-chat-input" class="ai-input-field" placeholder="اسأل المعلم الذكي عن أي مفهوم أو مسألة في هذا المرجع..." onkeydown="if(event.key==='Enter') sendChatMessage()" style="flex:1;">
+        <button class="btn-text ai-btn-highlight" onclick="sendChatMessage()" id="ai-send-btn">إرسال ↑</button>
+      </div>
+    </div>
+
+    <!-- تبويب 2: مركز الاختبارات التكيفية المطور -->
+    <div id="ai-view-quiz" style="display: none; flex-direction: column; flex: 1; overflow-y: auto; padding: 1.1rem; gap: 1rem;">
+      <div class="highlight-card" style="margin: 0; padding: 1rem 1.1rem; border-right-color: var(--accent);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+          <span style="font-size: 1.2rem;">🎯</span>
+          <h3 style="margin: 0; font-size: 1.05rem; color: var(--accent);">إعداد الاختبار الأكاديمي التكيفي</h3>
+        </div>
+        <p style="margin: 0 0 0.9rem 0; font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+          حدد معايير الاختبار الثلاثة، وسيتولى الذكاء الاصطناعي صياغة بنك أسئلة تقييمية مخصصة ومحكمة أكاديمياً:
+        </p>
+
+        <!-- المحدد 1: محتوى ونطاق الاختبار -->
+        <div style="margin-bottom: 0.85rem;">
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+            1. نطاق المحتوى المستهدف للاختبار:
+          </label>
+          <select id="quiz-cfg-scope" class="control-select" style="width: 100%; height: 38px; font-size: 0.86rem; background: var(--bg-surface); border: 1.5px solid var(--border-color); border-radius: 9px; padding: 0 0.75rem;">
+            <option value="all" selected>📚 جميع الفصول المتاحة معاً (الجزء الأول كاملاً - الفصول 1 إلى 7)</option>
+            <option value="mgmt_ch1">📖 الفصل 1: المديرون وموقعك في بيئة العمل</option>
+            <option value="mgmt_ch2">📖 الفصل 2: صناعة القرارات وتحديد الخيارات</option>
+            <option value="mgmt_ch3">📖 الفصل 3: إدارة البيئة الخارجية وثقافة المنظمة</option>
+            <option value="mgmt_ch4">📖 الفصل 4: ممارسات الإدارة في السياق العالمي</option>
+            <option value="mgmt_ch5">📖 الفصل 5: إدارة التنوع وتكافؤ الفرص</option>
+            <option value="mgmt_ch6">📖 الفصل 6: المسؤولية المجتمعية وأخلاقيات الأعمال</option>
+            <option value="mgmt_ch7">📖 الفصل 7: إدارة التغيير والابتكار المؤسسي</option>
+            <option value="current">📍 الفصل المفتوح حالياً في القارئ</option>
+          </select>
+        </div>
+
+        <!-- المحدد 2: مستوى الصعوبة -->
+        <div style="margin-bottom: 0.85rem;">
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+            2. مستوى صعوبة الاختبار:
+          </label>
+          <div class="segmented-control" style="grid-template-columns: 1fr 1fr 1.35fr;">
+            <button class="segment-btn active" id="quiz-diff-med" onclick="setQuizDifficulty('medium', this)">
+              <span>🟡 متوسط</span>
+            </button>
+            <button class="segment-btn" id="quiz-diff-high" onclick="setQuizDifficulty('high', this)">
+              <span>🟠 عالي ومتقدم</span>
+            </button>
+            <button class="segment-btn" id="quiz-diff-mba" onclick="setQuizDifficulty('mba', this)">
+              <span>🎓 ماجستير MBA</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- المحدد 3: عدد الأسئلة -->
+        <div style="margin-bottom: 0.95rem;">
+          <label style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+            3. عدد أسئلة الاختبار:
+          </label>
+          <div class="segmented-control" style="grid-template-columns: 1fr 1fr 1fr;">
+            <button class="segment-btn" onclick="setQuizCount(3, this)">3 أسئلة</button>
+            <button class="segment-btn active" onclick="setQuizCount(5, this)">5 أسئلة</button>
+            <button class="segment-btn" onclick="setQuizCount(10, this)">10 أسئلة</button>
+          </div>
+        </div>
+
+        <button class="btn-text ai-btn-highlight" id="btn-run-ai-quiz" onclick="startCustomAIQuiz()" style="width: 100%; height: 42px; justify-content: center; font-size: 0.92rem;">
+          <span>✨ بدء وتوليد الاختبار بالذكاء الاصطناعي</span>
+        </button>
+      </div>
+
+      <div id="ai-quiz-container" style="display: flex; flex-direction: column; gap: 0.9rem;"></div>
+    </div>
+
+    <!-- تبويب 3: التلخيص الكبسولي -->
+    <div id="ai-view-summary" style="display: none; flex-direction: column; flex: 1; overflow-y: auto; padding: 1.2rem;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+        <h3 style="margin:0; font-size:1.05rem; color:var(--accent);">كبسولة مراجعة الصفحة (<span id="summary-page-num">1</span>)</h3>
+        <button class="btn-text ai-btn-highlight" onclick="generateCurrentPageSummary()">استخلاص التلخيص الآن</button>
+      </div>
+      <div id="ai-summary-content" class="highlight-card" style="min-height:140px; font-size:0.95rem; line-height:1.8;">
+        انقر على زر "استخلاص التلخيص الآن" لاستخراج جوهر الصفحة والمصطلحات الحاسمة.
+      </div>
+    </div>
+  </div>
+
+  <div class="sheet-backdrop" id="sheet-backdrop" onclick="closeAllSheets()"></div>
+
+  <!-- درج رف المكتبة -->
+  <div class="bottom-sheet" id="library-sheet">
+    <div class="sheet-drag-handle" onclick="closeAllSheets()"></div>
+    <div class="sheet-header">
+      <span>رف الكتب الأكاديمية</span>
+      <button class="btn-icon" onclick="showView('lab'); closeAllSheets();" title="إدراج كتاب">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+    </div>
+    <div class="sheet-content" id="library-books-list"></div>
+  </div>
+
+  <!-- درج فصول الكتاب -->
+  <div class="bottom-sheet" id="chapters-sheet">
+    <div class="sheet-drag-handle" onclick="closeAllSheets()"></div>
+    <div class="sheet-header">
+      <span id="chapters-sheet-book-title">فصول المقرر</span>
+      <button class="btn-icon" onclick="closeAllSheets()">✕</button>
+    </div>
+    <div class="sheet-content" id="chapters-sheet-list"></div>
+  </div>
+
+  <!-- درج فهرس موضوعات الفصل -->
+  <div class="bottom-sheet" id="toc-sheet">
+    <div class="sheet-drag-handle" onclick="closeAllSheets()"></div>
+    <div class="sheet-header">
+      <span>فهرس موضوعات الفصل</span>
+      <button class="btn-icon" onclick="closeAllSheets()">✕</button>
+    </div>
+    <div class="sheet-content" id="toc-sheet-list"></div>
+  </div>
+
+  <!-- درج إعدادات القراءة والمظهر -->
+  <div class="bottom-sheet" id="settings-sheet">
+    <div class="sheet-drag-handle" onclick="closeAllSheets()"></div>
+    <div class="sheet-header">
+      <span>إعدادات القراءة والمظهر</span>
+      <button class="btn-icon" onclick="closeAllSheets()">✕</button>
+    </div>
+    <div class="sheet-content">
+      <div>
+        <span style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.5rem;">سمة المظهر:</span>
+        <div class="segmented-control">
+          <button class="segment-btn active" id="theme-btn-light" onclick="setTheme('light')">نهاري</button>
+          <button class="segment-btn" id="theme-btn-sepia" onclick="setTheme('sepia')">ورقي</button>
+          <button class="segment-btn" id="theme-btn-dark" onclick="setTheme('dark')">ليلي</button>
+          <button class="segment-btn" id="theme-btn-oled" onclick="setTheme('oled')">فحمي</button>
+        </div>
+      </div>
+      <div>
+        <span style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.5rem;">نوع الخط العربي:</span>
+        <div class="segmented-control">
+          <button class="segment-btn active" onclick="setFontFamily('IBM Plex Sans Arabic', this)">آي بي إم</button>
+        </div>
+      </div>
+      <div>
+        <span style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.5rem;">حجم الخط:</span>
+        <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg-subtle); padding:0.4rem 0.8rem; border-radius:10px; border:1px solid var(--border-color);">
+          <button class="btn-icon" onclick="adjustFontSize(-1)">-أ</button>
+          <span id="font-size-display" style="font-weight:700;">16.5px</span>
+          <button class="btn-icon" onclick="adjustFontSize(1)">+أ</button>
+        </div>
+      </div>
+      <div style="display:flex; gap:0.5rem; margin-top:0.8rem;">
+        <button class="btn-text" onclick="exportLibraryData()">نسخ احتياطي</button>
+        <button class="btn-text" onclick="document.getElementById('backup-file-input').click()">استيراد نسخة</button>
+        <button class="btn-text" onclick="resetLibraryToDefault()" style="color:#ef4444;">استعادة الأصل</button>
+      </div>
+      <input type="file" id="backup-file-input" accept=".json,application/json" style="display:none;" onchange="importLibraryData()">
+    </div>
+  </div>
+
+  <!-- نافذة تكبير وفحص الأشكال البيانية -->
+  <div class="diagram-modal" id="diagram-modal" style="position:fixed; inset:0; background:rgba(10,15,20,0.92); backdrop-filter:blur(8px); z-index:1600; display:none; flex-direction:column; padding:1rem;" onclick="if(event.target===this) closeDiagramModal()">
+    <div style="display:flex; justify-content:space-between; align-items:center; color:#fff; padding-bottom:0.8rem; border-bottom:1px solid rgba(255,255,255,0.15);">
+      <span style="font-weight:700; font-size:0.95rem;">معاينة مكبرة للشكل البياني والمعياري</span>
+      <div style="display:flex; gap:0.5rem;">
+        <button class="btn-text" onclick="zoomInDiagramModal()">➕ تكبير</button>
+        <button class="btn-text" onclick="zoomOutDiagramModal()">➖ تصغير</button>
+        <button class="btn-text" onclick="closeDiagramModal()" style="color:#fff; background:rgba(255,255,255,0.15); border:none;">✕ إغلاق</button>
+      </div>
+    </div>
+    <div id="diagram-modal-body" style="flex:1; display:flex; align-items:center; justify-content:center; overflow:auto; padding:1rem;"></div>
+  </div>
+
+  <div class="app-toast-container" id="toast-container"></div>
+
+  <script>
+    /* تسجيل عامل الخدمة للعمل دون اتصال (يتطلب HTTP/HTTPS) */
+    if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>

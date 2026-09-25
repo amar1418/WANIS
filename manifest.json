@@ -1,0 +1,41 @@
+{
+  "name": "وَنِيس — رفيق القراءة والتعلّم الأكاديمي",
+  "short_name": "وَنِيس",
+  "description": "مساحتك الهادئة وملاذك المصمم ليؤنس رحلتك بين أمهات الكتب والمراجع؛ يجمع بين عراقة الصفحة المنسابة، وفصاحة البيان الصافي، ومعلمٍ حكيم يُدارسك ويختبر استيعابك متى طلبت، دون ضجيج أو تشتيت.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f8f6f0",
+  "theme_color": "#155e8c",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "books", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "المكتبة",
+      "short_name": "المكتبة",
+      "description": "تصفح رف الكتب الأكاديمية",
+      "url": "/index.html",
+      "icons": [{ "src": "assets/icon.svg", "sizes": "64x64" }]
+    },
+    {
+      "name": "القارئ",
+      "short_name": "القارئ",
+      "description": "استئناف القراءة من حيث توقفت",
+      "url": "/index.html#reader",
+      "icons": [{ "src": "assets/icon.svg", "sizes": "64x64" }]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}
